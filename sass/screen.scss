@@ -1,7 +1,9 @@
-label {
-  display: block;
+body {
+  background-color: #ffa040;
+  background-image: radial-gradient(transparent, rgba(0,0,0,.3));
 }
 
-input {
-  display: block;
+.demo-form {
+  width: 50%;
+  margin: 50px auto;
 }
