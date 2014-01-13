@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+
+  <script type="text/template" id="ota-data-template">
+    <label for="brand">Brand</label>
+    <input type="text" name="brand" id="brand" value="<%= brand %>">
+    <label for="model">Model</label>
+    <input type="text" name="model" id="model" value="<%= model %>">
+    <label for="type">Optical Type</label>
+    <select name="type" id="type">
+      <% var type = type %>
+      <% for (var i = 0; i < otaTypes.length; i++) { %>
+        <option<% type === otaTypes[i] ? print(' selected="selected"') : '' %>><%= otaTypes[i] %></option>
+      <% } %>
+    </select>
+    <label for="aperture">Aperture</label>
+    <input type="text" name="aperture" id="aperture" value="<%= aperture %>">
+    <label for="focalLength">Focal Length</label>
+    <input type="text" name="focalLength" id="focal-length" value="<%= focalLength %>">
+    <label for="focalRatio">Focal Ratio</label>
+    <input type="text" name="focalRatio" id="focal-ratio" value="<%= focalRatio %>">
+    <label for="secondaryMirror">Secondary Mirror Obstruction</label>
+    <input type="text" name="secondaryMirror" id="secondary-mirror" value="<%= secondaryMirror %>">
+    <label for="weight">Weight</label>
+    <input type="text" name="weight" id="weight" value="<%= weight %>">
+  </script>
+
+  <div id="ota-data">
+  </div>
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/underscore-min.js"></script>
+  <script src="js/backbone-min.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
